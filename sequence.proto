@@ -16,7 +16,7 @@ message TypeSerialized {
     repeated TypeSerialized children = 3;
 }
 
-message Values {
+message ValueSerialized {
     oneof elems {
         uint32 int = 1;
         bool bit = 2;
