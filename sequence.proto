@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package languages.sequence.proto;
+
+enum TypeVersion {
+    Unit = 0;
+    Bit = 1;
+    Int = 2;
+    ATuple = 3;
+    Seq = 4;
+}
+
+message TypeSerialized {
+    TypeVersion v = 1;
+    uint32 n = 2;
+    repeated TypeSerialized children = 3;
+}
+
+message Values {
+    oneof elems {
+        uint32 int = 1;
+        bool bit = 2;
+        TupleValue tuple = 3;
+        SeqValue seq = 4;
+    }
+}
+
+message TupleValue {
+    Values left = 1;
+    Values right = 2;
+}
+
+message SeqValue {
+    repeated Values values = 1;
+}
+
