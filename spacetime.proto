@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package languages.space_time.types_serialized;
+package languages.space_time.proto;
 
 enum TypeVersion {
     Unit = 0;
