@@ -31,6 +31,6 @@ message TupleValue {
 }
 
 message SeqValue {
-    repeated Values values = 1;
+    repeated ValueSerialized values = 1;
 }
 
