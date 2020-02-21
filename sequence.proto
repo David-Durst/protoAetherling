@@ -26,8 +26,8 @@ message ValueSerialized {
 }
 
 message TupleValue {
-    Values left = 1;
-    Values right = 2;
+    ValueSerialized left = 1;
+    ValueSerialized right = 2;
 }
 
 message SeqValue {
