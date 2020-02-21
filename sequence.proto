@@ -18,7 +18,7 @@ message TypeSerialized {
 
 message ValueSerialized {
     oneof elems {
-        uint32 int = 1;
+        int32 int = 1;
         bool bit = 2;
         TupleValue tuple = 3;
         SeqValue seq = 4;
