@@ -5,9 +5,14 @@ package languages.sequence.proto;
 enum TypeVersion {
     Unit = 0;
     Bit = 1;
-    Int = 2;
-    ATuple = 3;
-    Seq = 4;
+    Int8 = 2;
+    UInt8 = 3;
+    Int16 = 4;
+    UInt16 = 5;
+    Int32 = 6;
+    UInt32 = 7;
+    ATuple = 8;
+    Seq = 9;
 }
 
 message TypeSerialized {
@@ -19,9 +24,10 @@ message TypeSerialized {
 message ValueSerialized {
     oneof elems {
         int32 int = 1;
-        bool bit = 2;
-        TupleValue tuple = 3;
-        SeqValue seq = 4;
+        uint32 uint = 2;
+        bool bit = 3;
+        TupleValue tuple = 4;
+        SeqValue seq = 5;
     }
 }
 

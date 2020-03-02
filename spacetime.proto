@@ -5,11 +5,16 @@ package languages.space_time.proto;
 enum TypeVersion {
     Unit = 0;
     Bit = 1;
-    Int = 2;
-    ATuple = 3;
-    STuple = 4;
-    SSeq = 5;
-    TSeq = 6;
+    Int8 = 2;
+    UInt8 = 3;
+    Int16 = 4;
+    UInt16 = 5;
+    Int32 = 6;
+    UInt32 = 7;
+    ATuple = 8;
+    STuple = 9;
+    SSeq = 10;
+    TSeq = 11;
 }
 
 message TypeSerialized {
